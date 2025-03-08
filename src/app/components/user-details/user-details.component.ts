@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IUser } from '../../interfaces/user/user.interface';
+import { PipesModule } from '../../pipes/pipe.module';
 
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PipesModule], // Adicione o PipesModule aqui
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.css']
 })
@@ -25,5 +26,6 @@ export class UserDetailsComponent {
   toggleSidebar() {
     this.isSidebarOpen = false;
   }
+  
 }
 
