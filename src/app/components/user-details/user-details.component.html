@@ -51,14 +51,16 @@
 
     <!-- Verifica se há um usuário selecionado antes de exibir os dados -->
     <div *ngIf="user" class="mt-6 text-white">
-      <p><strong>Nome:</strong> {{ user.nome }}</p>
-      <p><strong>Email:</strong> {{ user.email }}</p>
-      <p><strong>Telefone:</strong> {{ user.telefone | phone }}</p>
-      <p><strong>Status:</strong> {{ user.status | status }}</p>
-      <p><strong>Função:</strong> {{ user.funcao }}</p>
-      <p><strong>Data de Cadastro:</strong> {{ user.dataCadastro | dateCustom }}</p>
+      <p><strong>Nome:</strong> {{ user.nome | emptyValue }}</p>
+      <p><strong>Email:</strong> {{ user.email | emptyValue }}</p>
+      <p><strong>Telefone:</strong> {{ user.telefone | phone | emptyValue:'Sem telefone cadastrado' }}</p>
+      <p><strong>Status:</strong> {{ user.status | status | emptyValue:'Sem status' }}</p>
+      <p><strong>Função:</strong> {{ user.funcao | emptyValue:'Função não definida' }}</p>
+      <p><strong>Data de Cadastro:</strong> {{ user.dataCadastro | dateCustom | emptyValue:'Data não disponível' }}</p>
+      
       <p class="mt-1 text-lg font-semibold">Endereço</p>
-      <p> {{ user.endereco | address }}</p>
+      <p> {{ user.endereco | address | emptyValue:'Endereço não cadastrado' }}</p>
+      
       
     </div>
   </div>

@@ -2,10 +2,10 @@
   <!--Left container-->
   <div class="w-full h-full flex flex-col bg-black">
     <div class="grow h-34">
-      <app-filter></app-filter>
+      <app-filter (filterChanged)="table.applyFilters($event)"></app-filter>
     </div>
     <div class="h-[60vh]">
-      <app-table (userSelected)="userDetails.openSidebar($event)"></app-table>
+<app-table #table (userSelected)="userDetails.openSidebar($event)"></app-table>
       
     </div>
   </div>
