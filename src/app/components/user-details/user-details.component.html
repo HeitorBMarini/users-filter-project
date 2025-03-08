@@ -56,8 +56,8 @@
       <p><strong>Telefone:</strong> {{ user.telefone | phone }}</p>
       <p><strong>Status:</strong> {{ user.status | status }}</p>
       <p><strong>Função:</strong> {{ user.funcao }}</p>
-
-      <h3 class="mt-4 text-lg font-semibold">Endereço</h3>
+      <p><strong>Data de Cadastro:</strong> {{ user.dataCadastro | dateCustom }}</p>
+      <p class="mt-1 text-lg font-semibold">Endereço</p>
       <p> {{ user.endereco | address }}</p>
       
     </div>
