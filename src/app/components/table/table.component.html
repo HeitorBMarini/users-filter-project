@@ -1,0 +1,20 @@
+<div class="relative overflow-x-auto mr-6 rounded-md ml-10">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">Nome</th>
+                <th scope="col" class="px-6 py-3">Função</th>
+                <th scope="col" class="px-6 py-3">Data de Cadastro</th>
+                <th scope="col" class="px-6 py-3">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <td class="px-6 py-4">{{ user.nome }}</td>
+                <td class="px-6 py-4">{{ user.funcao }}</td>
+                <td class="px-6 py-4">{{ user.dataCadastro | date:'dd/MM/yyyy' }}</td>
+                <td class="px-6 py-4">{{ getStatus(user) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
