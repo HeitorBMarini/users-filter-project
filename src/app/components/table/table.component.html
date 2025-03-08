@@ -9,11 +9,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of userList">
+            <tr *ngFor="let user of userList" (click)="selectUser(user)" class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
                 <td class="px-6 py-4">{{ user.nome }}</td>
                 <td class="px-6 py-4">{{ user.funcao }}</td>
                 <td class="px-6 py-4">{{ user.dataCadastro | date:'dd/MM/yyyy' }}</td>
-                <td class="px-6 py-4">{{ getStatus(user) }}</td>
+                <td class="px-6 py-4">{{ user.status.online ? 'Ativo' : 'Inativo' }}</td>
             </tr>
         </tbody>
     </table>

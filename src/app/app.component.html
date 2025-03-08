@@ -5,14 +5,14 @@
       <app-filter></app-filter>
     </div>
     <div class="h-[60vh]">
-      <app-table></app-table>
-
+      <app-table (userSelected)="userDetails.openSidebar($event)"></app-table>
+      
     </div>
   </div>
 
   <!--Right container-->
 
   <div class="bg-gray-800">
-    <app-user-details></app-user-details>
+    <app-user-details #userDetails></app-user-details>
   </div>
 </div>
