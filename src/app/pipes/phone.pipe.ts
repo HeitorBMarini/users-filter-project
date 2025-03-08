@@ -1,11 +1,13 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-    name: 'phone'
+    name: 'phone',
+    standalone: true // Permite standalone components usarem diretamente
 })
-
 export class PhonePipe implements PipeTransform {
     transform(value: string): string {
+        if (!value) return '';
+
         const ddd = value.slice(0, 2);
         const part1 = value.slice(2, 7);
         const part2 = value.slice(7, 11);

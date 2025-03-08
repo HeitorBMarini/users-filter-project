@@ -1,8 +1,10 @@
 import { NgModule } from "@angular/core";
-import { PhonePipe } from "./phone.pipe"; // Importe o Pipe corretamente
+import { PhonePipe } from "./phone.pipe";
+import { AddressPipe } from "./address.pipe";
 
 @NgModule({
-    declarations: [PhonePipe], // Declare o Pipe
-    exports: [PhonePipe] // Exporte para uso nos componentes
+    declarations: [],
+    imports: [PhonePipe, AddressPipe], // Standalone pipes devem estar aqui
+    exports: [PhonePipe, AddressPipe]
 })
 export class PipesModule { }

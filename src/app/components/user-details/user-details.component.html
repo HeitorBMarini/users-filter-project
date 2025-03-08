@@ -57,9 +57,8 @@
       <p><strong>Função:</strong> {{ user.funcao }}</p>
 
       <h3 class="mt-4 text-lg font-semibold">Endereço</h3>
-      <p>{{ user.endereco.rua }}, Nº {{ user.endereco.numero }}</p>
-      <p>{{ user.endereco.cidade }} - {{ user.endereco.estado }}</p>
-      <p>{{ user.endereco.pais }}</p>
+      <p> {{ user.endereco | address }}</p>
+      
     </div>
   </div>
 </aside>
