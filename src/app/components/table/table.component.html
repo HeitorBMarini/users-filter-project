@@ -11,7 +11,7 @@
         <tbody>
             <tr *ngFor="let user of filteredList" 
                 (click)="selectUser(user)" 
-                [class.bg-blue-200]="user === selectedUser"
+                [class.bg-zinc-800]="user === selectedUser"
                 class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
                 <td class="px-6 py-4">{{ user.nome }}</td>
                 <td class="px-6 py-4">{{ user.funcao }}</td>
