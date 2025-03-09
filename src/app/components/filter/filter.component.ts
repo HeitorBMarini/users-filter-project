@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-filter',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+  standalone: true, // Componente independente
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  styleUrls: ['./filter.component.css'],
+  imports: [CommonModule, FormsModule] // 🔥 Certifique-se de que os módulos estão corretos
 })
 export class FilterComponent {
   nome: string = '';
